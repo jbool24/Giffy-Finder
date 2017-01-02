@@ -1,0 +1,132 @@
+body {
+    width: 100%;
+    font-size: 20px;
+    font-family: helvetica, sans-serif;
+    background-color: silver;
+}
+
+header {
+    height: 120px;
+    background-color: #fff;
+}
+
+header>div.logo-box {
+    position: relative;
+    top: 0;
+    left: -40px;
+    text-align: center;
+    font-size: 40px;
+    width: 50%;
+    height: 135px;
+    background: grey;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #6600ff, #66ff33);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, red, yellow);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, red, yellow);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952, #66ff33);
+    /* Standard syntax (must be last) */
+    transform: skew(-28deg, 0);
+}
+
+header div .logo-box-content {
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Rubik Mono One', sans-serif;
+    text-shadow: 10px 8px 18px #000;
+    transform: skew(38deg, 0);
+    padding-top: 20px;
+}
+
+form {
+    padding: 10px;
+}
+
+.drop-shadow {
+    -webkit-box-shadow: 3px 2px 18px 13px rgba(125, 124, 125, .8);
+    -moz-box-shadow: 3px 2px 18px 13px rgba(125, 124, 125, .8);
+    box-shadow: 3px 2px 18px 13px rgba(125, 124, 125, .8);
+}
+
+.box-shadow {}
+
+.button-box {
+    padding: 20px;
+    margin: 40px 120px;
+    background-color: MistyRose;
+}
+
+.content-box {
+    display: flex;
+    margin: 10px 120px;
+    background-color: honeydew;
+}
+
+.side-box {
+    flex: 1;
+    padding: 20px;
+    background-color: turquoise;
+}
+
+.gifs-container {
+    flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: MediumSpringGreen;
+}
+
+.gif-frame {
+    flex: 1 1 auto;
+    position: relative;
+    width: 280px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gif-frame img {
+    border-radius: 8px;
+}
+
+.gif-frame span {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/*-----------------------
+*    Animation
+*-----------------------*/
+
+@keyframes load {
+    0% {
+        opacity: .2;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .2;
+    }
+}
+
+span.loading {
+    animation-name: load;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+span.loading:nth-child(2) {
+    /** offset 2nd dot */
+    animation-delay: .2s;
+}
+
+span.loading:nth-child(3) {
+    /**offset 3rd dot from second dot */
+    animation-delay: .4s;
+}
