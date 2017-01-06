@@ -2,11 +2,11 @@ $(document).ready(() => {
     // internal globals
     const gifAPI = "http://api.giphy.com/v1/gifs/";
     const gifDevKey = "dc6zaTOxFJmzC";
-    var gifList = ["hello", "omg", "meta", "fail"];
+    var gifList = ["retro", "omg", "meta", "fail"];
 
     (function onFirstLoad() {
         // make call to function with defualt params
-        getGiphy("search", "hello");
+        getGiphy("search", gifList[0]);
 
         renderButtons();
     })();
@@ -69,7 +69,7 @@ $(document).ready(() => {
     }
 
     function getGiphy(queryType, queryStr) {
-        var queryURL = gifAPI + queryType + "?q=" + queryStr + "&rating=&quotr&quot&limit=10&api_key=" + gifDevKey;
+        var queryURL = gifAPI + queryType + "?q=" + queryStr + "&rating=pg&limit=10&api_key=" + gifDevKey;
 
         $.ajax({
             url: queryURL,

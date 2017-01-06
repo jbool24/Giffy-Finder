@@ -16,7 +16,7 @@ header>div.logo-box {
     text-align: center;
     font-size: 40px;
     width: 50%;
-    height: 135px;
+    height: 94px;
     /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(180deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952);
     /* For Safari 5.1 to 6.0 */
@@ -29,13 +29,13 @@ header>div.logo-box {
     transform: skew(-28deg, 0);
 }
 
-header div .logo-box-content {
+header div.logo-box-content {
     color: #fff;
     font-size: 35px;
     font-family: 'Rubik Mono One', sans-serif;
     text-shadow: 10px 8px 18px #000;
     transform: skew(38deg, 0);
-    padding-top: 20px;
+    padding-top: 18px;
 }
 
 form {
@@ -43,7 +43,8 @@ form {
 }
 
 .gif-logo {
-    background-image: url("../../imgs/logo_buildtext_white_forever.gif")
+    background-image: url("../imgs/gif-logo.gif");
+    width: 100px;
 }
 
 .drop-shadow {
@@ -56,7 +57,7 @@ form {
 
 .button-box {
     padding: 20px;
-    margin: 40px 120px;
+    margin: 40px 10%;
     background-color: #6600ff;
 }
 
@@ -66,7 +67,7 @@ form {
 
 .content-box {
     display: flex;
-    margin: 10px 120px;
+    margin: 10px 10%;
     background-color: honeydew;
 }
 
@@ -89,6 +90,7 @@ form {
     flex: 1 1 auto;
     position: relative;
     width: 280px;
+    margin: 8px;
     align-items: center;
 }
 
@@ -98,9 +100,8 @@ form {
 
 .gif-frame img {
     width: 95%;
-    max-height: 200px;
+    max-height: 300px;
     border-radius: 8px;
-    margin: 2px;
     justify-content: space-around;
 }
 
@@ -114,13 +115,9 @@ form {
     font-family: monospace;
     background-color: rgba(0, 0, 0, 0.4);
 }
+/*    Animation */
 
-
-/*-----------------------
-*    Animation
-*-----------------------*/
-
-@@keyframes slidein {
+@keyframes slidein {
     100% {
         transform: translateX(0);
     }
@@ -153,4 +150,30 @@ span.loading:nth-child(2) {
 span.loading:nth-child(3) {
     /**offset 3rd dot from second dot */
     animation-delay: .4s;
+}
+
+@media only screen and (max-width: 667px) {
+    header>div.logo-box {
+        width: auto;
+    }
+    header div.logo-box-content {
+        font-size: 25px;
+    }
+    .content-box {
+        flex-wrap: wrap-reverse;
+        margin: 10px 20%;
+        width: auto;
+    }
+    .gifs-container {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    header>div.logo-box {
+        width: auto;
+    }
+    header div.logo-box-content {
+        font-size: 25px;
+    }
 }
