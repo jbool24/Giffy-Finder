@@ -2,12 +2,11 @@ body {
     width: 100%;
     font-size: 20px;
     font-family: helvetica, sans-serif;
-    background-color: silver;
+    background-color: whitesmoke;
 }
 
 header {
     height: 120px;
-    background-color: #fff;
 }
 
 header>div.logo-box {
@@ -18,15 +17,14 @@ header>div.logo-box {
     font-size: 40px;
     width: 50%;
     height: 135px;
-    background: grey;
     /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(-90deg, #6600ff, #66ff33);
+    background: -webkit-linear-gradient(180deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952);
     /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(-90deg, red, yellow);
+    background: -o-linear-gradient(180deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952);
     /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(-90deg, red, yellow);
+    background: -moz-linear-gradient(180deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952);
     /* For Firefox 3.6 to 15 */
-    background: linear-gradient(-90deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952, #66ff33);
+    background: linear-gradient(180deg, #6600ff, #6619EB, #6659B8, #6666AD, #669985, #66d952);
     /* Standard syntax (must be last) */
     transform: skew(-28deg, 0);
 }
@@ -44,6 +42,10 @@ form {
     padding: 10px;
 }
 
+.gif-logo {
+    background-image: url("../../imgs/logo_buildtext_white_forever.gif")
+}
+
 .drop-shadow {
     -webkit-box-shadow: 3px 2px 18px 13px rgba(125, 124, 125, .8);
     -moz-box-shadow: 3px 2px 18px 13px rgba(125, 124, 125, .8);
@@ -55,7 +57,11 @@ form {
 .button-box {
     padding: 20px;
     margin: 40px 120px;
-    background-color: MistyRose;
+    background-color: #6600ff;
+}
+
+.btn {
+    margin: 0 4px;
 }
 
 .content-box {
@@ -74,7 +80,8 @@ form {
     flex-grow: 2;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 20px;
     background-color: MediumSpringGreen;
 }
 
@@ -83,17 +90,28 @@ form {
     position: relative;
     width: 280px;
     align-items: center;
-    justify-content: space-around;
+}
+
+.gif-frame .active-gif {
+    box-shadow: 0px 0px 10px 10px #337ab7;
 }
 
 .gif-frame img {
+    width: 95%;
+    max-height: 200px;
     border-radius: 8px;
+    margin: 2px;
+    justify-content: space-around;
 }
 
 .gif-frame span {
     position: absolute;
     top: 10px;
     left: 20px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: monospace;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -101,6 +119,12 @@ form {
 /*-----------------------
 *    Animation
 *-----------------------*/
+
+@@keyframes slidein {
+    100% {
+        transform: translateX(0);
+    }
+}
 
 @keyframes load {
     0% {

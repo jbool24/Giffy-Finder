@@ -23,9 +23,9 @@
 
 <body>
     <header>
-      <div class="logo-box drop-shadow">
-        <div class="logo-box-content">Giffy-Loader<span class="loading">.</span><span class="loading">.</span><span class="loading">.</span></div>
-      </div>
+        <div class="logo-box drop-shadow">
+            <div class="logo-box-content">Giffy-Loader<span class="loading">.</span><span class="loading">.</span><span class="loading">.</span></div>
+        </div>
     </header>
     <div class="button-box">
         <button type="button" class="btn btn-default">Hello</button>
@@ -36,7 +36,7 @@
     </div>
     <div class="content-box">
         <div class="gifs-container">
-
+            <!--Gifs go here  -->
         </div>
         <aside class="side-box">
             <form id="gif-form">
@@ -44,18 +44,19 @@
                 <input type="text" id="gif-input">
                 <br>
                 <!-- Button triggers new movie to be added -->
-                <input id="add-gif" type="submit" value="Search">
+                <button id="add-gif" type="submit">Search</button>
             </form>
             <div class="powered">
-              <p>powered by</p>
+                <p>powered by</p>
+                <div class="gif-logo"></div>
             </div>
         </aside>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="assets/js/loading.js" charset="utf-8"></script>
     <script src="assets/js/giphy.js" charset="utf-8"></script>
+
 </body>
 
 </html>
