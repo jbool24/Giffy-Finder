@@ -36,6 +36,8 @@ $(document).ready(() => {
         e.preventDefault();
         var gif = $("#gif-input").val().trim();
 
+        getGiphy("search", gif);
+
         if (gif.length > 0 && gifList.indexOf(gif) === -1) {
             gifList.push(gif);
             renderButtons();
@@ -81,19 +83,26 @@ $(document).ready(() => {
 
             gifCont.empty();
 
-            gifObjs.forEach(gif => {
-                var gifFrame = $("<div>").addClass("gif-frame");
-                var gifImg = $("<img>").append("<span class='rating'>" + gif.rating + "</span>");
+            if (gifObjs.length == 0) {
+                gifCont.append("<div>Oops. We didn't find anything. Try again.");
+                console.log(gifList, gifList.indexOf(queryStr))
+                gifList.splice(gifList.indexOf(queryStr), 1);
+                renderButtons();
+            } else {
+                gifObjs.forEach(gif => {
+                    var gifFrame = $("<div>").addClass("gif-frame");
+                    var gifImg = $("<img>").append("<span class='rating'>" + gif.rating + "</span>");
 
-                gifImg.data("still", gif.images.original_still.url);
-                // Eact initial img is the still version
-                gifImg.attr("src", gif.images.original_still.url);
-                gifImg.data("moving", gif.images.original.url);
-                // Add img to Frame
-                gifFrame.append(gifImg);
-                // Add html to DOM
-                gifCont.append(gifFrame);
-            });
+                    gifImg.data("still", gif.images.original_still.url);
+                    // Eact initial img is the still version
+                    gifImg.attr("src", gif.images.original_still.url);
+                    gifImg.data("moving", gif.images.original.url);
+                    // Add img to Frame
+                    gifFrame.append(gifImg);
+                    // Add html to DOM
+                    gifCont.append(gifFrame);
+                });
+            }
         });
     };
 });
