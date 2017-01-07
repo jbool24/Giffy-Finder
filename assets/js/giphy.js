@@ -1,6 +1,6 @@
 $(document).ready(() => {
     // internal globals
-    const gifAPI = "http://api.giphy.com/v1/gifs/";
+    const gifAPI = "https://api.giphy.com/v1/gifs/";
     const gifDevKey = "dc6zaTOxFJmzC";
     var gifList = ["retro", "omg", "meta", "fail"];
 
