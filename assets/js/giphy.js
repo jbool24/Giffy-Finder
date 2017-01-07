@@ -71,6 +71,7 @@ $(document).ready(() => {
     }
 
     function getGiphy(queryType, queryStr) {
+      console.log(gifAPI)
         var queryURL = gifAPI + queryType + "?q=" + queryStr + "&rating=pg&limit=10&api_key=" + gifDevKey;
 
         $.ajax({
