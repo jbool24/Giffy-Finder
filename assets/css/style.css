@@ -77,6 +77,10 @@ form {
     background-color: turquoise;
 }
 
+.side-box button{
+   margin: 10px 10px 10px 0;
+}
+
 .gifs-container {
     flex-grow: 2;
     display: flex;
@@ -114,6 +118,10 @@ form {
     border-radius: 6px;
     font-family: monospace;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.powered {
+  margin: 10px;
 }
 /*    Animation */
 
